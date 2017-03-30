@@ -148,7 +148,7 @@ if user_yn == "y":
         },
     ]
 
-    response = requests.post(url, data=json.dumps(payload), headers=myheaders, auth=(var_sw_user, password)).json()
+    response = requests.post(url, data=json.dumps(payload), headers=myheaders, auth=(var_sw_user, var_sw_pass)).json()
 
     myheaders = {'content-type': 'application/json-rpc'}
     url = "http://"+var_sw2_ip+"/ins"
@@ -255,7 +255,7 @@ if user_yn == "y":
         }
     ]
 
-    response = requests.post(url, data=json.dumps(payload), headers=myheaders, auth=(var_sw_user, password)).json()
+    response = requests.post(url, data=json.dumps(payload), headers=myheaders, auth=(var_sw_user, var_sw_pass)).json()
 
     print("Success!")
 
@@ -277,7 +277,7 @@ if user_yn == "y":
             },
         ]
         
-        response = requests.post(url, data=json.dumps(payload), headers=myheaders, auth=(var_sw_user, password)).json()
+        response = requests.post(url, data=json.dumps(payload), headers=myheaders, auth=(var_sw_user, var_sw_pass)).json()
 
         url = "http://"+var_sw2_ip+"/ins"
 
@@ -293,7 +293,7 @@ if user_yn == "y":
             },
         ]
 
-        response = requests.post(url, data=json.dumps(payload), headers=myheaders, auth=(var_sw_user, password)).json()
+        response = requests.post(url, data=json.dumps(payload), headers=myheaders, auth=(var_sw_user, var_sw_pass)).json()
         print("Goodbye")
     else:
         print("Configuration not saved!")
